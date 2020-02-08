@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import axios from "axios";
 import CharacterCard from "./CharacterCard";
+import {Container, Row} from 'reactstrap';
 
 const CharacterList = () => {
 
@@ -21,12 +22,14 @@ const CharacterList = () => {
   useEffect(effectCallback, []);
 
   return (
-    <div>
-        {/* <CharacterCard character={characters} /> */}
-      {characters.map(character => (
-        <CharacterCard key={character.url} character={character} />
-      ))}
-    </div>
+    <Container>
+      <Row>
+
+        {characters.map(character => (
+          <CharacterCard key={character.url} character={character} />
+        ))}
+      </Row>
+    </Container>
   );
 };
 

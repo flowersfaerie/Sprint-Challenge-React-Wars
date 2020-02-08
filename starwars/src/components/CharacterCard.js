@@ -1,6 +1,5 @@
 import React from 'react';
-import { Card, Button, CardHeader, CardFooter, CardBody,
-    CardTitle, CardText } from 'reactstrap';
+import { Card, CardHeader, CardBody, CardText, Col } from 'reactstrap';
 
 // import "./StarWars.css";
 
@@ -21,7 +20,7 @@ const CharacterCard = props => {
     // );
 
     return (
-        <div>
+        <Col xs='6' md='4' lg='3'>
             <Card>
             <CardHeader>{props.character.name}</CardHeader>
             <CardBody>
@@ -30,10 +29,9 @@ const CharacterCard = props => {
                 <CardText>Year Born {props.character.birth_year}</CardText>
                 <CardText>Hair Color {props.character.hair_color}</CardText>
                 <CardText>Eye Color {props.character.eye_color}</CardText>
-                <Button>Go somewhere</Button>
             </CardBody>
             </Card>
-        </div>
+        </Col>
         );
     };
 
