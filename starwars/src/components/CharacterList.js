@@ -24,7 +24,6 @@ const CharacterList = () => {
   return (
     <Container>
       <Row>
-
         {characters.map(character => (
           <CharacterCard key={character.url} character={character} />
         ))}
