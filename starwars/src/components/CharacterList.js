@@ -11,9 +11,9 @@ const CharacterList = () => {
   const effectCallback = () => {
 
     axios
-      .get("https://swapi.co/api/people/1")
+      .get("https://swapi.co/api/people/")
       .then(response => {
-        setCharacters(response.data);
+        setCharacters(response.data.results);
       })
       .catch(error => console.log(error));
   };
@@ -22,10 +22,10 @@ const CharacterList = () => {
 
   return (
     <div>
-        <CharacterCard character={characters} />
-      {/* {characters.map(character => (
-        <CharacterCard key={character.id} character={character} />
-      ))} */}
+        {/* <CharacterCard character={characters} /> */}
+      {characters.map(character => (
+        <CharacterCard key={character.url} character={character} />
+      ))}
     </div>
   );
 };

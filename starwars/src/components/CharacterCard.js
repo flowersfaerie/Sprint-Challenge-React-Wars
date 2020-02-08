@@ -6,12 +6,13 @@ const CharacterCard = props => {
     
     return (
         <div className="character-list">
-            Character Card
             <h2>Character Name: {props.character.name}</h2>
             <div className="bottom">
-                <p>Height: {props.character.height}cm</p>
-                <p>Weight: {props.character.mass}kg</p>
+                <p>Height: {props.character.height}</p>
+                <p>Weight: {props.character.mass}</p>
                 <p>Year Born: {props.character.birth_year}</p>
+                <p>Hair Color: {props.character.hair_color}</p>
+                <p>Eye Color: {props.character.eye_color}</p>
             </div>
         </div>
     );
